@@ -191,9 +191,14 @@ body {
 
 .projects__text {
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     font-style: normal;
     line-height: normal; 
+    text-align: center;
+}
+
+.projects__text span {
+    font-weight: bold;
 }
 
 .projects__slider {
@@ -293,16 +298,29 @@ body {
     position: relative;
 }
 
+.double {
+    column-gap: 20px;
+}
+
 .examples__card:nth-child(odd) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto 1fr;
 }
 
-.examples__card:nth-child(odd) .examples__image {
+.single:nth-child(odd) .examples__image {
     grid-column: span 2;
 }
 
-.examples__card:nth-child(odd) .examples__info{ 
+.double:nth-child(odd) .examples__image:first-child {
+    grid-column: 1;
+}
+
+.double:nth-child(odd) .examples__image:not(:first-child){
+    grid-column: 2;
+    margin-top: 70px;
+}
+
+.examples__card:nth-child(odd) .examples__info { 
     grid-column: 2 / 4;
     grid-row: 2;
 }
@@ -312,11 +330,20 @@ body {
     grid-template-rows: auto 1fr;
 }
 
-.examples__card:nth-child(even) .examples__image {
+.single:nth-child(even) .examples__image {
     grid-column: 2 / 4;
 }
 
-.examples__card:nth-child(even) .examples__info{ 
+.double:nth-child(even) .examples__image:first-child {
+    grid-column: 2;
+    margin-top: 70px;
+}
+
+.double:nth-child(even) .examples__image:not(:first-child){
+    grid-column: 3;
+}
+
+.examples__card:nth-child(even) .examples__info { 
     grid-column: span 2;
     grid-row: 2;
 }
@@ -368,7 +395,7 @@ body {
 .line-4 {
     width: 72%;
     max-width: 1050px;
-    height: 5px;
+    min-height: 5px;
     background-color: var(--accent-bg);
     margin: 0 auto;
 }
@@ -376,13 +403,13 @@ body {
 .line-5 {
     width: 62%;
     max-width: 900px;
-    height: 5px;
+    min-height: 5px;
     background-color: var(--accent-bg);
     margin: 0 auto;
 }
 
 .skills__title {
-    color: #000;
+    color: var(--white-text);
     text-align: center;
     font-size: 94px;
     font-style: normal;
@@ -401,10 +428,11 @@ body {
 }
 
 .skill {
-    max-width: 500px;
+    max-width: 1020px;
 }
 
 .skill__info {
+    margin-top: 10px;
     color: #CBC7B8;
     font-family: Inter;
     font-size: 40px;
