@@ -7,9 +7,14 @@
     --blackest: #000;
     --black: #181818;
     --yellow: #DEAA45;
+    --yellow-2: #E8D794;
+    --brown: #6b6456;
     --bronze: #665c40;
     --bronze-2: #bcb69f;
+    --bronze-3: #A8A08B;
+    --bronze-4: #c2beb4;
     --gray: #d4d6d2;
+    --gray-2: #CBC8C2;
     --white: #ffffff;
 
     --defolt-bg: var(--gray);
@@ -20,6 +25,10 @@
     --white-text: var(--white);    
     --dark-border: var(--black);
     --light-border: var(--white);
+
+    --bg-1: var(--bronze-4);
+    --bg-2: var(--bronze-3);
+    --bg-3: var(--brown);
 }
 
 html,
@@ -29,7 +38,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--defolt-bg);
+    background-color: var(--bg-2);
     color: var(--text-color);
 }
 
@@ -38,7 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 930px;
-    padding: 10px 20px 0 20px;
+    padding: 0 20px 0 20px;
     overflow: hidden;
 }
 
@@ -50,6 +59,10 @@ body {
     max-width: 1250px;
     padding-left: 50px;
     z-index: 1;
+    background-color: var(--bg-1);
+    padding-right: 10px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .logo {
@@ -111,7 +124,7 @@ body {
 }
 
 .header__title span {
-    color: var(--black-text);
+    color: var(--white-text);
 }
 
 .header__button {
@@ -143,34 +156,31 @@ body {
 }
 
 .line {
-    top: -120px;
     position: absolute;
-    width: 5px;
-    height: 1200px;
-    background-color: var(--accent-bg);
-    transform: rotate(-34deg);
+    width: 1100px;
+    left: 0;
+    height: 30px;
+    background-color: var(--yellow-2);
 }
 
 .line-1 {
-    left: 69%;
+    top: 24%;
 }
 
 .line-2 {
-    left: calc(69% + 70px);
-}
-
-.line-3 {
-    left: calc(69% + 140px);
+    top: calc(24% + 140px);
 }
 
 .projects {
     padding: 100px 20px;
-    background: 
+    /* background: 
     linear-gradient(180deg, #636363 -10%, rgba(255, 255, 255, 0.66) 50%),
-    linear-gradient(0deg, #000 -10%, rgba(255, 255, 255, 0.66) 30%);
+    linear-gradient(0deg, #000 -10%, rgba(255, 255, 255, 0.66) 30%); */
 }
 
 .projects__info {
+    z-index: 1;
+    position: relative;
     margin: 0 auto 50px auto;
     width: 100%;
     max-width: 1200px;
@@ -244,6 +254,33 @@ body {
     display: none;
 }
 
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--gray-2);
+}
+
+.circle-1 {
+    width: 700px;
+    height: 700px;
+    top: 110%;
+    left: -10%;
+}
+
+.circle-2 {
+    width: 300px;
+    height: 300px;
+    top: 105%;
+    right: -5%;;
+}
+
+.circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 150%;
+    right: 10%;
+}
+
 .examples {
     position: relative;
     height: 100%;
@@ -266,7 +303,7 @@ body {
     overflow-wrap: break-word;
 }
 
-.examples::before {
+/* .examples::before {
     content: "";
     position: absolute;
     top: auto;
@@ -277,9 +314,9 @@ body {
     background-color: var(--accent-bg);
     height: 100%;
     z-index: 0;
-}
+} */
 
-.examples__cards {
+/* .examples__cards {
     display: flex;
     flex-direction: column;
     gap: 150px;
@@ -376,11 +413,65 @@ body {
     font-weight: 700;
     line-height: 137.374%;
     letter-spacing: 4.48px;
+} */
+
+.examples__cards {
+    width: max-content;
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card__title {
+    font-size: 94px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--white-text);
+}
+
+.card__info {
+    font-size: 32px;
+    font-family: "Inter", sans-serif;
+    color: var(--white-text);
+}
+
+.card__image {
+    margin: 0 auto;
+}
+
+.info {
+    min-height: 700px;
+    background-image: url(../images/info.png);
+    background-size: cover;
+    color: var(--white-text);
+    text-align: center;
+    padding: 250px 0;
+}
+
+.info__title {
+    font-size: 94px;
+    margin-bottom: 100px;
+    letter-spacing: 16%;
+}
+
+.info__text {
+    font-size: 34px;
 }
 
 .skills {
     height: 2000px;
-    background-image: url(../images/scaffolding.png);
+    /* background-image: url(../images/scaffolding.png); */
+    background-color: var(--bg-3);
     padding: 200px 20px;
 }
 
