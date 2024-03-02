@@ -157,7 +157,7 @@ body {
 
 .line {
     position: absolute;
-    width: 1100px;
+    width: 60%;
     left: 0;
     height: 30px;
     background-color: var(--yellow-2);
@@ -263,21 +263,21 @@ body {
 .circle-1 {
     width: 700px;
     height: 700px;
-    top: 110%;
+    top: 1000px;
     left: -10%;
 }
 
 .circle-2 {
     width: 300px;
     height: 300px;
-    top: 105%;
-    right: -5%;;
+    top: 900px;
+    right: -5%;
 }
 
 .circle-3 {
     width: 150px;
     height: 150px;
-    top: 150%;
+    top: 1200px;
     right: 10%;
 }
 
@@ -603,6 +603,7 @@ body {
 @media screen and (max-width: 450px) {
     .nav, .header__info {
         padding-left: 0;
+        background-color: transparent;
     }
 
     .name {
@@ -651,6 +652,11 @@ body {
         width: max-content;
     }
 
+    .projects {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
     .projects__title {
         font-size: 32px;
         line-height: 137.374%; /* 43.96px */
@@ -676,20 +682,39 @@ body {
         height: 202px;
     }
 
+    .circle-1 {
+        width: 250px;
+        height: 250px;
+        top: 950px;
+        left: -25%;
+    }
+    
+    .circle-2 {
+        width: 120px;
+        height: 120px;
+        top: 940px;
+        /* right: -5%; */
+    }
+    
+    .circle-3 {
+        width: 70px;
+        height: 70px;
+        top: 1070px;
+    }
+
     .examples {
         position: relative;
         height: 100%;
-        padding: 0 30% 100px 30%;
+        padding: 0 10px 100px 10px;
     }
     
     .center {
-        padding: 100px 1%;
         text-align: center;
         font-size: 36px;
         font-style: normal;
         font-weight: 400;
-        line-height: 140%;
         letter-spacing: 15px;
+        padding: 50px 0 50px 0;
     }
 
     .examples__text {
@@ -772,5 +797,31 @@ body {
     
     .contact {
         font-size: 16px;
+    }
+
+    .card__title {
+        font-size: 32px;
+    }
+
+    .card__info {
+        font-size: 12px;
+    }
+
+    .info {
+        min-height: 300px;
+        padding: 100px 0;
+    }
+
+    .info__title {
+        font-size: 32px;
+    }
+
+    .info__text {
+        font-size: 16px;
+    }
+
+    .skill__info {
+        font-size: 14px;
+        letter-spacing: 10px;
     }
 }
